@@ -84,6 +84,9 @@ module.exports = function (timrcnf,oauthcnf) {
                   })
                 }
                 else {
+                  var vaccineStartDate = moment().subtract(1,'month').startOf('month').format('YYYY-MM-DD')
+                  var vaccineEndDate = moment().subtract(1,'month').endOf('month').format('YYYY-MM-DD')
+                  query = query + '&date=ge' + vaccineStartDate + '&date=le' + vaccineEndDate
                   queries.push({'query':query})
                   callback(queries)
                 }

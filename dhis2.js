@@ -1,7 +1,6 @@
 'use strict'
 const winston = require('winston')
 const request = require('request')
-const humanizeAge = require('humanize-age')
 const URI = require('urijs')
 const imm_dataelements = require('./terminologies/dhis-immunization-valuesets.json')
 
